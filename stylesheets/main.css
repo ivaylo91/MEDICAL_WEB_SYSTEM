@@ -1,114 +1,43 @@
-/*reset all styles */
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
 body {
-    margin: 20px auto;
-    padding: 20px;
+    font-family: 'Manrope', system-ui, sans-serif;
 }
 
-#main_form {
-    width: 250px;
-    height: 320px;
-    border: 1px solid #000;
-    padding: 20px;
-    margin: 20px auto;
-    background-color: #fafad2;
-    border-radius: 6px;
+.js [data-reveal] {
+    opacity: 0;
+    transform: translateY(24px) scale(0.985);
+    transition: opacity 0.55s ease, transform 0.55s ease;
 }
 
-select,input {
-    display: block;
-}
-p {
-    font-size: 11px;
-    font-style: italic;
-    margin-bottom: 5px;
-    color: #2f4f4f;
+.js [data-reveal].is-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
 }
 
-.add {
-    margin-left: 10px;
+.alert-leave {
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-#add_form {
-
-    width: 410px;
-    height: 550px;
-    border: 1px solid #000;
-    padding: 20px;
-    margin: 20px auto;
-    background-color: #fafad2;
-    border-radius: 6px;
+[data-medicament-app].is-busy {
+    opacity: 0.85;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
 }
 
-#register {
-    margin-top: 20px;
+::selection {
+    background: rgba(103, 232, 249, 0.35);
+    color: #e2e8f0;
 }
 
-input[type="date"] {
-
-    margin-top: 5px;
-    padding: 5px;
+input[type='date']::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    filter: invert(0.9) saturate(0) brightness(1.2);
 }
 
-input[type="submit"] {
-    margin-top: 20px;
-}
-
-table, tr, th, tr, td {
-    border: 1px solid #000;
+a {
+    text-decoration: none;
 }
 table {
-    margin: 20px auto;
-    padding: 20px;
-}
-
-h3 {
-    text-align: center;
-}
-
-#edit {
-    width: 370px;
-    height: 480px;
-}
-
-.center {
-    text-align: center;
-}
-
-.red {
-    text-align: center;
-    font-style: italic;
-}
-
-.right {
-    float: right;
-    overflow: hidden;
-}
-
-.red-notify {
-    font-style: italic;
-    color: #ff0000;
-    text-align: center;
-}
-
-.green-notify {
-    font-style: italic;
-    color: #008000;
-    text-align: center;
-}
-span{
-    margin-left: 5px;
-}
-#search_form{
-    width: 300px;
-    float: right;
-    margin-right: 40px;
-}
-#left{
-    margin-left: 10px;
+    border-collapse: collapse;
 }
